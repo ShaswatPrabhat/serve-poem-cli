@@ -8,14 +8,14 @@ const Poem = importJsx('./poem');
 const getRandomProperty = require('../utils/getRandomProperty');
 const { ERROR_FETCHING_LABELS } = require('../assets/en.json');
 
-const PoemFetch = () => {
+const PoemFetch = ({ numberOfLines = 4 }) => {
 		const [poem, setPoem] = React.useState('');
 		const [error, setErrorState] = React.useState(false);
 		const [fetchingPoem, setFetchingPoem] = React.useState(true);
 
 		React.useEffect(() => {
 			if (!poem) {
-				fetch('https://poetrydb.org/random,linecount/3;4').then((body) => {
+				fetch(`https://poetrydb.org/random,linecount/3;${numberOfLines}`).then((body) => {
 					body.json().then((res) => {
 						setPoem(res[Math.floor(Math.random() * res.length)]);
 					});

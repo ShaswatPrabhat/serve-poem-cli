@@ -7,14 +7,14 @@ const PoemFetch = importJsx('./poemFetch');
 const getRandomProperty = require('../utils/getRandomProperty');
 
 
-const App = () => {
+const App = ({ nol }) => {
 
 	return (
 		<Box margin={1} flexGrow={1} flexBasis={3} width='50%' borderStyle='round' flexDirection='column'>
 			<Text bold>
 				{getRandomProperty(HELLO_LABELS)}
 			</Text>
-			<PoemFetch />
+			<PoemFetch numberOfLines={nol} />
 		</Box>
 	);
 };

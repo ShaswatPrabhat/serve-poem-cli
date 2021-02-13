@@ -12,11 +12,10 @@ const cli = meow(`
 	  $ serve-poem-cli
 
 	Options
-		--name  Your name
+		--nol  Number of lines in the poem to be fetched
 
 	Examples
-	  $ serve-poem-cli --name=Jane
-	  Hello, Jane
+	  $ serve-poem-cli --nol=10
 `);
 
 render(React.createElement(ui, cli.flags));

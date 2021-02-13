@@ -1,35 +1,21 @@
 'use strict';
 const React = require('react');
-const { Text } = require('ink');
-const fetch = require('node-fetch');
-const { FETCHING_POEMS_LABEL } = require('../assets/en.json');
-const getRandomProperty = require('../utils/getRandomProperty');
+const { Text, Box, Spacer } = require('ink');
 
-const Poem = ({ poemObject }) => {
-		const [poem, setPoem] = React.useState('');
-		const [error, setErrorState] = React.useState(false);
-		const [fetchingPoem, setFetchingPoem] = React.useState(true);
+const Poem = ({ poemObject }) => (
+	<Box flexDirection='column'>
+		<Box>
+			<Text bold color='blue' marginBottom={0.5}>Title: {poemObject.title}</Text>
+		</Box>
+		<Box>
+			<Text color='blue'>By: {poemObject.author}</Text>
+		</Box>
+		<Box flexDirection='column' marginTop={1}>
+			{poemObject.lines.map((line) => <Text key={line.replace(/ /g, '')}>{line}</Text>)}
+		</Box>
 
-		React.useEffect(() => {
-			if (!poem) {
-				fetch('https://poetrydb.org/random,linecount/3;4').then((body) => {
-					body.json().then((res) => {
-						setFetchingPoem(false);
-						setPoem(res[Math.floor(Math.random() * res.length)]);
-					});
-				}).catch(() => {
-					setErrorState(true);
-				});
-			}
-		}, [poem, error, fetchingPoem]);
+	</Box>
+);
 
-		return (
-			<Text>
-				{fetchingPoem && <Text color='blue'>{getRandomProperty(FETCHING_POEMS_LABEL)}</Text>}
-				{/*{poem && <Text color='blue'>{JSON.stringify(poem)}</Text>}*/}
-			</Text>
-		);
-	}
-;
 
 module.exports = Poem;

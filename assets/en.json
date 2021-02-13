@@ -4,9 +4,14 @@
 	"ENTHUSIASTIC_HELLO": "Hello, Poem enthusiast",
 	"OPTIMISTIC_HELLO": "Hello\nWhat would life be without poems"
   },
-  "FETCHING_POEMS_LABEL": {
+  "FETCHING_POEMS_LABELS": {
 	"SIMPLE_FETCHING_POEMS": "Fetching poems",
 	"ENTHUSIASTIC_FETCHING_POEMS": "Hold on... Fetching poems",
 	"OPTIMISTIC_FETCHING_POEMS": "Getting your poem now..."
+  },
+  "ERROR_FETCHING_LABELS": {
+	"SIMPLE_ERROR_FETCHING": "Sorry there was some issue fetching the poems.",
+	"ENTHUSIASTIC_ERROR_FETCHING": "Oops!\nSomething went wrong",
+	"OPTIMISTIC_ERROR_FETCHING": "Mild hiccup encountered.\nCare to try again?"
   }
 }

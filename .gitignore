@@ -1,0 +1,10 @@
+### react ###
+.DS_*
+*.log
+logs
+node_modules
+bower_components
+
+# User-specific stuff
+.editorconfig
+.idea/

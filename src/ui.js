@@ -1,10 +1,10 @@
 'use strict';
 const React = require('react');
-const {Text} = require('ink');
+const { Text } = require('ink');
 
-const App = ({name = 'Stranger'}) => (
+const App = ({ name = 'Stranger' }) => (
 	<Text>
-		Hello, <Text color="green">{name}</Text>
+		Hello, <Text color='blue'>{name}</Text>
 	</Text>
 );
 

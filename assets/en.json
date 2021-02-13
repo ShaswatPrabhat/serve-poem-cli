@@ -1,0 +1,12 @@
+{
+  "HELLO_LABELS": {
+	"SIMPLE_HELLO": "Hello!",
+	"ENTHUSIASTIC_HELLO": "Hello, Poem enthusiast",
+	"OPTIMISTIC_HELLO": "Hello\nWhat would life be without poems"
+  },
+  "FETCHING_POEMS_LABEL": {
+	"SIMPLE_FETCHING_POEMS": "Fetching poems",
+	"ENTHUSIASTIC_FETCHING_POEMS": "Hold on... Fetching poems",
+	"OPTIMISTIC_FETCHING_POEMS": "Getting your poem now..."
+  }
+}

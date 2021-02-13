@@ -11,12 +11,13 @@
 	},
 	"files": [
 		"cli.js",
-	  "src/ui.js"
+		"src/ui.js"
 	],
 	"dependencies": {
 		"import-jsx": "^4.0.0",
 		"ink": "^3.0.8",
 		"meow": "^9.0.0",
+		"node-fetch": "^2.6.1",
 		"react": "^17.0.1"
 	},
 	"devDependencies": {
